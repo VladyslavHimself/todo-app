@@ -1,0 +1,14 @@
+:root {
+    --sidebar-background-color: #f4f6f8;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    font-family: --apple-system, 'Roboto', sans-serif;
+}

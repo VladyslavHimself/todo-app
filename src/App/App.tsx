@@ -1,3 +1,6 @@
+import 'normalize.css';
+import './globals.css';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { IRoute } from '../Routes/routes';
 import routes from '../Routes/routes';
