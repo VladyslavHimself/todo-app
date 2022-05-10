@@ -1,16 +1,19 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NotFound from '../Pages/404';
-import Auth from '../Pages/Auth';
-
-import authRoute from '../Routes/auth.jsx';
+import { IRoute } from '../Routes/routes';
+import routes from '../Routes/routes';
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Auth />} />
-                <Route path="*" element={<NotFound />} />
-                {authRoute}
+                {routes.map((route: IRoute, index: number) => (
+                    <Route
+                        key={index}
+                        path={route.path}
+                        element={route.element}
+                        {...routes}
+                    />
+                ))}
             </Routes>
         </Router>
     );
