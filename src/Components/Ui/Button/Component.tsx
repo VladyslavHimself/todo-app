@@ -1,6 +1,6 @@
 import classes from './styles.module.scss';
 
-interface IButtonProps {
+interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
     type?: 'primary' | 'secondary' | 'ghost';
 }
