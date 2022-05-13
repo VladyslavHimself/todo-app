@@ -1,0 +1,78 @@
+$primary-color: #4dd599;
+$primary-color-hover: #44ba87fc;
+$primary-color-active: #3da478fc;
+$primary-text: #fff;
+
+$secondary-color: #f4f6f8;
+$secondary-color-hover: #dedfe1;
+$secondary-color-active: #cccccc;
+$secondary-text: #fff;
+
+$ghost-color: #9c9c9c;
+$ghost-color-hover: #797979;
+$ghost-color-active: #505050;
+$ghost-text: #fff;
+
+.button {
+    cursor: pointer;
+
+    padding: 11px 35px;
+
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0.15px;
+
+    transition: 0.3s ease;
+}
+
+.primary {
+    color: $primary-text;
+
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $primary-color-hover;
+    }
+
+    &:active {
+        background-color: $primary-color-active;
+    }
+}
+
+.secondary {
+    color: var(--secondary-color);
+
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $secondary-color-hover;
+    }
+
+    &:active {
+        background-color: $secondary-color-active;
+    }
+}
+
+.ghost {
+    width: fit-content;
+    height: 30px;
+    padding: 0px 10px;
+    color: $ghost-color;
+
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+        color: $ghost-color-hover;
+    }
+
+    &:active {
+        color: $ghost-color-active;
+    }
+}
