@@ -5,8 +5,13 @@ interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     type?: 'primary' | 'secondary' | 'ghost';
 }
 
-export const Button = ({ children, type, ...props }: IButtonProps) => {
-    const buttonClasses = [classes.button];
+export const Button = ({
+    children,
+    type,
+    className,
+    ...props
+}: IButtonProps) => {
+    const buttonClasses = [classes.button, className];
     type && buttonClasses.push(classes[type]);
 
     return (
