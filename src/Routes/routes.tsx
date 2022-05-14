@@ -2,6 +2,7 @@ import React from 'react';
 import Auth from '../Pages/Auth';
 import NotFound from '../Pages/404';
 import Todo from '../Pages/Todo';
+import Register from '../Pages/Register';
 
 export interface IRoute {
     path: string;
@@ -31,7 +32,7 @@ export const routes: IRoute[] = [
     {
         path: '/register',
         exact: true,
-        element: <Auth />,
+        element: <Register />,
     },
 
     {
