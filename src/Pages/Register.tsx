@@ -1,12 +1,23 @@
+import { useNavigate } from 'react-router-dom';
 import Button from '../Components/Ui/Button';
 import Input from '../Components/Ui/Input';
 import ModalForm from '../Layouts/ModalForm';
 import classes from '../scss/auth.module.scss';
 
-function Auth() {
+function Register() {
+    const navigate = useNavigate();
+
+    const onCloseButtonClickHandle = () => {
+        navigate('/');
+    };
+
     return (
         <div className={classes.auth}>
-            <ModalForm className={classes.form}>
+            <ModalForm
+                className={classes.form}
+                withCloseButton
+                onCloseButtonClickHandler={onCloseButtonClickHandle}
+            >
                 <h2>Register</h2>
                 <div className={classes.inputs}>
                     <Input className={classes.input} placeholder="Full Name" />
@@ -28,4 +39,4 @@ function Auth() {
     );
 }
 
-export default Auth;
+export default Register;
