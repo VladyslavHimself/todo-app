@@ -10,7 +10,11 @@ function Auth() {
                 <h2>Login</h2>
                 <div className={classes.inputs}>
                     <Input className={classes.input} placeholder="Email" />
-                    <Input className={classes.input} placeholder="Password" />
+                    <Input
+                        type="password"
+                        className={classes.input}
+                        placeholder="Password"
+                    />
                 </div>
 
                 <div className={classes.buttons}>
