@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../Components/Ui/Button';
 import Input from '../Components/Ui/Input';
 import useInput from '../hooks/useInput';
@@ -8,6 +8,12 @@ import classes from '../scss/auth.module.scss';
 function Auth() {
     const email = useInput('');
     const password = useInput('');
+
+    const router = useNavigate();
+
+    const changeToRegsitration = () => {
+        router('/register');
+    };
 
     return (
         <div className={classes.auth}>
@@ -31,7 +37,11 @@ function Auth() {
                     <Button className={classes.button} type="primary">
                         Log In
                     </Button>
-                    <Button className={classes.button} type="ghost">
+                    <Button
+                        onClick={changeToRegsitration}
+                        className={classes.button}
+                        type="ghost"
+                    >
                         Register
                     </Button>
                 </div>
